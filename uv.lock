@@ -1,0 +1,435 @@
+version = 1
+revision = 1
+requires-python = ">=3.13"
+
+[[package]]
+name = "adafruit-blinka"
+version = "8.66.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-circuitpython-typing" },
+    { name = "adafruit-platformdetect" },
+    { name = "adafruit-pureio" },
+    { name = "binho-host-adapter" },
+    { name = "pyftdi" },
+    { name = "sysv-ipc", marker = "platform_machine != 'mips' and sys_platform == 'linux'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/35/2d/7469c26dbeade72709096922db34a75fecb47c6953dba0cd4c14ee2b3b45/adafruit_blinka-8.66.2.tar.gz", hash = "sha256:35f72589aa45d8738922367753f5588700b043b35611510d8efbe818d1a355fd", size = 268839 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/70/c8/49ab498e87d04977a0c706af25825c5051daf2553b41c5b10eb7e9e8b19e/adafruit_blinka-8.66.2-py3-none-any.whl", hash = "sha256:93cfd6df6c523bc1312b731bdb4d51711d3ec6e468f18c8d40e09b7339bb2574", size = 399931 },
+]
+
+[[package]]
+name = "adafruit-blinka-displayio"
+version = "2.3.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-circuitpython-bitmap-font" },
+    { name = "adafruit-circuitpython-typing" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1f/55/4f19e17f26a09dab5612cd90fdff072d7d3ed997af5415c46bb80c9dabd6/adafruit_blinka_displayio-2.3.1.tar.gz", hash = "sha256:cef052c81d8e60f325e62c1bf06933b76c91336d900c3411899ba32d75735da1", size = 90013 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/94/15/78cdbdd80a3428d1bc181c69c9cace75b03b91cdcc7793270a6662245c50/adafruit_blinka_displayio-2.3.1-py3-none-any.whl", hash = "sha256:092c4740cfb6e068fcd2b6efd439f791f39b46e1ba86a9679bb1b8b943212b9a", size = 83402 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-bitmap-font"
+version = "2.3.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-blinka-displayio" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/43/52/e9aa0b3acaba3411647c38056800013bd04bd14afc66005fceace2102d82/adafruit_circuitpython_bitmap_font-2.3.1.tar.gz", hash = "sha256:bb93a693d45693159b180cee1516e2be98c6ce0dbb133b8a812c4da97f50b25f", size = 843163 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/04/09/738754dc409b1353dc13e25071bc2a7b10c7216b2292300fa996ef4f2b08/adafruit_circuitpython_bitmap_font-2.3.1-py3-none-any.whl", hash = "sha256:673acd98ab8e4238e2518bf1473c05547f9579f84a31cc2d5021003bacbce00d", size = 15816 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-bme280"
+version = "2.6.29"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-circuitpython-busdevice" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/75/2b/7b1d38f0bbe52a9eb485f2a104ca4995fed91733ca6016718a009c3722a9/adafruit_circuitpython_bme280-2.6.29.tar.gz", hash = "sha256:29eaeace1f68102c76037008f3dc7f15479f61825b84b324235f096149ea7fad", size = 29669 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/dc/d8/b35d9cbf1abf908b2f63de6e7b12d5421793e9ab67b7e09ac86b2c288fd8/adafruit_circuitpython_bme280-2.6.29-py3-none-any.whl", hash = "sha256:60cf579a12d54d774557d300076d61fdb6e56d9deffdb12b7a419dbebd0e2241", size = 12407 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-busdevice"
+version = "5.2.13"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-circuitpython-typing" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/34/de/6c974f577169789d5105baba5f9e7d3ac00fdc467bc21673382a5d9e41f4/adafruit_circuitpython_busdevice-5.2.13.tar.gz", hash = "sha256:8dbe511f08a347527652f494b55d793c91dc077e01666824b691ae96a05ff2e6", size = 24165 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fb/4f/e9fad422c8e85213f3b9e2d0e58342c67bf03c50f889661adef12f07495f/adafruit_circuitpython_busdevice-5.2.13-py3-none-any.whl", hash = "sha256:de90f8cd9cc7f8815840f04b6a24c9aa5ec355b368934c7373e219a1c740ea97", size = 7501 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-color-terminal"
+version = "0.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4c/21/3725549e5c48936ba9ff551b5a9bac959f468a3568b9ab8e44f423e9e465/adafruit_circuitpython_color_terminal-0.2.0.tar.gz", hash = "sha256:d56371b6f62c9f9aaeb425d81cc0990970bc50acccc60912a4b7b98117fc93bd", size = 33586 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1c/40/f842b1aaf9a0acf21f14f6e19c831ba8441d634f8a65adf33ba637233407/adafruit_circuitpython_color_terminal-0.2.0-py3-none-any.whl", hash = "sha256:1491ae84a8d91458868526a93086c3d5a1580fcd55377ffdaeeb237f0cb66446", size = 6915 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-connectionmanager"
+version = "3.1.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6b/24/22c00c99d0597e703dd73b5f042854620a5db2424c03606e93d3f4e2e5a8/adafruit_circuitpython_connectionmanager-3.1.5.tar.gz", hash = "sha256:fc037d7ff81cf7bab7653f2810ed8c65fe228e7d51ca7a630724b412d6c77226", size = 33632 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/eb/37/09acb7aed34a1c72465884d071a9dbad112994a3f416ad904e4acfd83bc8/adafruit_circuitpython_connectionmanager-3.1.5-py3-none-any.whl", hash = "sha256:cea077efe79eaefcd8fc0d6649dbcc6cb0765f71a08bd944fb163043b18cd094", size = 7767 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-display-shapes"
+version = "2.10.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ca/d6/829659521b18e206aa1e6a268447f779d356e7767c764b887b9627b2a1f3/adafruit_circuitpython_display_shapes-2.10.4.tar.gz", hash = "sha256:f5998c2eb763bd8bc08e0cd5ddcd4491ef5d2a26785c0a88bb0ad206dc0332af", size = 36724 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b7/40/addbb11722c16a3c98275675cb3edf426ef3006cf0b056c17f1af0b4021e/adafruit_circuitpython_display_shapes-2.10.4-py3-none-any.whl", hash = "sha256:c030ac6d971a9c7e445f639fd1c920edf0c1331925dab71e0ed67c275a2d012a", size = 20980 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-display-text"
+version = "3.3.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-blinka-displayio" },
+    { name = "adafruit-circuitpython-bitmap-font" },
+    { name = "adafruit-circuitpython-ticks" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/35/62/c3cd72d314a246831f88cc747f765c6bf7340a1e34b095663685dd17e5c5/adafruit_circuitpython_display_text-3.3.3.tar.gz", hash = "sha256:4f44fc65134c82c1a9dd5ef5ced8ef25ed94d5ee6bce12faf68e394d04480d83", size = 81622 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6f/d2/17a5ea5c05229d2f9ea80402fd801d962e52132a69c9161aa5e33d3f1bad/adafruit_circuitpython_display_text-3.3.3-py3-none-any.whl", hash = "sha256:45f823a2edb78fdaa834f8a62fdd5a1043aa54bb411a56484ef2516ff9efb6d6", size = 25916 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-displayio-layout"
+version = "3.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-blinka-displayio" },
+    { name = "adafruit-circuitpython-bitmap-font" },
+    { name = "adafruit-circuitpython-display-shapes" },
+    { name = "adafruit-circuitpython-display-text" },
+    { name = "adafruit-circuitpython-imageload" },
+    { name = "adafruit-circuitpython-typing" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/cb/1e/e0a742975882f6410d0ab3c63bd79b391c2db96618560e795b70ffc00445/adafruit_circuitpython_displayio_layout-3.1.1.tar.gz", hash = "sha256:882a075fa05cee2b3a8204d709b4a51c9fb1eb90586545d2bbd09b0df9898248", size = 232309 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/10/0e/46a5d6782670c36eb286c9ce89db1cbfff77a2b3d7efd951578f73317a0b/adafruit_circuitpython_displayio_layout-3.1.1-py3-none-any.whl", hash = "sha256:5543d6081f6fc04adf1ec7b1332478cf08c343d077ccb983ae210577739d02aa", size = 51020 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-drv2605"
+version = "1.3.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-circuitpython-busdevice" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/17/4d/69e39c8eb547db3cdab7e3e842322957e5fced3df3e24380e77c39a54f8b/adafruit_circuitpython_drv2605-1.3.7.tar.gz", hash = "sha256:d678ff9a96aba588b05a20aac236076bc7787ef8be37ab73159677a798b1b54f", size = 24987 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/71/24/b56d6107adf32efd15fd1b5d162568de741e133e9d2b9bb99263f8ba99c3/adafruit_circuitpython_drv2605-1.3.7-py3-none-any.whl", hash = "sha256:7e1df94bb57ef3376ba2f18ed73b98f58ca4505c59c60f8fdb5bc20110339f4d", size = 7254 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-ds3231"
+version = "2.4.25"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-circuitpython-busdevice" },
+    { name = "adafruit-circuitpython-register" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0f/c4/4150e2a7bf02d618461848c9221d2036aa13647107920a8b2a8e59447d04/adafruit_circuitpython_ds3231-2.4.25.tar.gz", hash = "sha256:8d871ef2258053445b418a3cc4271d0dfe9fd3988cf2de7424749a6c2e6928ca", size = 293147 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/88/78/e2a43ca32a7c2829b5b2b78ada09bae53f2efec0d1bd3b02987402db6c58/adafruit_circuitpython_ds3231-2.4.25-py3-none-any.whl", hash = "sha256:e134f76d49b53d7470203f7d9bee5bf3ec09c24c7ac84c63884f64ad2af5aa0d", size = 6762 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-gc9a01a"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ea/67/6f0791a56caa9b7bef0ecb388292b88a42ff642b3c3b988a9cd11e5f70f4/adafruit_circuitpython_gc9a01a-1.0.0.tar.gz", hash = "sha256:877bcc3ab7c7c21b2cb0a13d69cc552442da6c802ca133bf72fb0db03c6be0c1", size = 23608 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ff/70/fb840c5f3f96b6279142e76f7b9823184b115ed0b61555c2be2e156c1301/adafruit_circuitpython_gc9a01a-1.0.0-py3-none-any.whl", hash = "sha256:f6f2955ea1cade0c01fffee6a3faebe355913b05f95090518305ad3cfef890fc", size = 5368 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-imageload"
+version = "1.24.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-blinka-displayio" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/06/60/d982bd6f34ebb10940676a1e58215ee55027b4dae3926aaa4fdf83a859d8/adafruit_circuitpython_imageload-1.24.4.tar.gz", hash = "sha256:2a63f34f21f7337d8ac866c26f72bdb8d09bd519a98ac91320c6c547a9afc61b", size = 94460 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9c/a3/eda753d141d6d9686c8708e6ff2635cea4fde8b08be45fe2102829841a3c/adafruit_circuitpython_imageload-1.24.4-py3-none-any.whl", hash = "sha256:b254a80483e1a8f37a2cfea615d3027eb9bf30c804582b4248edc62d0253d01a", size = 28263 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-neopixel"
+version = "6.3.17"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-circuitpython-pixelbuf" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/da/8c/e075c4a61c85028f8e99c69ec8a2120b2f3ec71c91f1e8a81ed58619042c/adafruit_circuitpython_neopixel-6.3.17.tar.gz", hash = "sha256:7da734619e52c323f0d6b978002da1b2ca0519755b0c86d01df5ffa6f0c11cb3", size = 25035 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/58/48/8ce30c0a99bb4a7795955a1da9052dbb29bf12e67cc6b702987d151dc7fb/adafruit_circuitpython_neopixel-6.3.17-py3-none-any.whl", hash = "sha256:e73a159c1c2d43269357eb68e28cb8c184ef05cd9a932ef8fe60b0bae189c4ba", size = 6520 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-pixelbuf"
+version = "2.0.9"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3e/40/e6fefc78319765d33150b73874935d4817055c360af8807576c89cc0e4d7/adafruit_circuitpython_pixelbuf-2.0.9.tar.gz", hash = "sha256:06b7249ebab929148e705208d9ebca92afc37a86ab0576b55661fd11204e2833", size = 24588 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/87/a1/6aebcb9aead06475f3d8922d65dc37b6be90802eb07954e3fcadc8eb9fc9/adafruit_circuitpython_pixelbuf-2.0.9-py3-none-any.whl", hash = "sha256:8c6e89894e26411ace808baa06cf1292e2807a084f32f9a57509ede77ce4b9a4", size = 6979 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-register"
+version = "1.10.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-circuitpython-busdevice" },
+    { name = "adafruit-circuitpython-typing" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/14/7c/4f2879e6dc672b5ae182c7aaef369a4e58bab2785c80a3873c32f55234ea/adafruit_circuitpython_register-1.10.4.tar.gz", hash = "sha256:56be1403e62d5017189b003fc47857337ca8292187cd087cf0757ad4a0ef86b0", size = 29165 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/73/e5/f06bc8d95717179c5f4550ea0cace6ba4fcae49039b1e5080c1b18ef4f4d/adafruit_circuitpython_register-1.10.4-py3-none-any.whl", hash = "sha256:96dd6c7771e9b23ab664068a9403e75ff7fbcb3b05549f6c256e3176ee110765", size = 14823 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-requests"
+version = "4.1.13"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-circuitpython-connectionmanager" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/55/5c/d17ff26270289c11ea787a73a922c1a9d85d8dea67e8d2fad1e36b181bc1/adafruit_circuitpython_requests-4.1.13.tar.gz", hash = "sha256:a63fa4eb5824f1f458030da6f44a060d28c01570ffa48569b992abe8e477a1d6", size = 67276 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bf/53/c59ee1edf3305fc5a66ea62db50918ce841a5f6bf7b94d273625a9364f7d/adafruit_circuitpython_requests-4.1.13-py3-none-any.whl", hash = "sha256:2d5af59a96dca033033fcc8c17829c3fb28ed8c36a95fe1093c463f5841bc5a5", size = 10880 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-ticks"
+version = "1.1.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c1/6c/1e4bada4a3c72df840ee59cbb7f2740f19c4e32d72db7ad560881468bb2b/adafruit_circuitpython_ticks-1.1.4.tar.gz", hash = "sha256:f8f924cec64bfc1c658eb5606924b88b3a32c33235c8ee75ede491c96f687085", size = 23029 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6a/89/c483674e6976ebb15c988664665d670162d5117ae06a039c75a144530521/adafruit_circuitpython_ticks-1.1.4-py3-none-any.whl", hash = "sha256:ca80274703f85b3bf0c18857ca25eb08f1bb8914bb7348bb0b06a39f16e740d8", size = 5413 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-typing"
+version = "1.12.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-circuitpython-busdevice" },
+    { name = "adafruit-circuitpython-requests" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/31/12/cd335c0adfdbf836cd6cfc0658238fe1e056481cc9d83d1960acd4af6b0b/adafruit_circuitpython_typing-1.12.2.tar.gz", hash = "sha256:8a38ad064a665f84ce7a89454f0f37fd072f77d1b5b1a207bc54181cdd0d7e26", size = 25358 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/dc/9b/87d9f26652b10250d427f50116c00fa90c80d21c9c6cc361b69692cc29ca/adafruit_circuitpython_typing-1.12.2-py3-none-any.whl", hash = "sha256:d03e20cb86c5daaadd5297b7d729bd9280fae540a86cbe9fdfa687ca5f4b1f45", size = 11014 },
+]
+
+[[package]]
+name = "adafruit-circuitpython-veml7700"
+version = "2.1.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-circuitpython-busdevice" },
+    { name = "adafruit-circuitpython-register" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/14/22/c275ce380d6a0f94db989f4eae6f9485a3cdae99be42f779de22f7ac1130/adafruit_circuitpython_veml7700-2.1.5.tar.gz", hash = "sha256:acf87103990da558b2e8d233f862ecb9e035b7d897d8e6ca0d999f4249c7406e", size = 24464 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/30/0e/0367be259b860e717fc25872185953f6a8bc901a0233eb25490085b7a3c7/adafruit_circuitpython_veml7700-2.1.5-py3-none-any.whl", hash = "sha256:8b24808556397cf5c6190efd16df064c9b746a6158030ef40953c2bf31a65d05", size = 6563 },
+]
+
+[[package]]
+name = "adafruit-platformdetect"
+version = "3.84.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/5a/7b/42a3d2a5d6f470a70e47c8c4c122c8014e91bda35876518709004651338b/adafruit_platformdetect-3.84.0.tar.gz", hash = "sha256:71dc77b358047e6ae4fe94247ea03449fe8ab3e3e937239d5bd1d4b942ebee73", size = 49154 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/aa/e0/932c83d203fa90961dc8f853bbfc889d1985a81267db0a1032a91f086af8/adafruit_platformdetect-3.84.0-py3-none-any.whl", hash = "sha256:7c0ebb89e3e40a36b53363377fe05b517e756b1a8944afcee25f633de79e149f", size = 26613 },
+]
+
+[[package]]
+name = "adafruit-pureio"
+version = "1.1.11"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e5/b7/f1672435116822079bbdab42163f9e6424769b7db778873d95d18c085230/Adafruit_PureIO-1.1.11.tar.gz", hash = "sha256:c4cfbb365731942d1f1092a116f47dfdae0aef18c5b27f1072b5824ad5ea8c7c", size = 35511 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/19/9d/28e9d12f36e13c5f2acba3098187b0e931290ecd1d8df924391b5ad2db19/Adafruit_PureIO-1.1.11-py3-none-any.whl", hash = "sha256:281ab2099372cc0decc26326918996cbf21b8eed694ec4764d51eefa029d324e", size = 10678 },
+]
+
+[[package]]
+name = "binho-host-adapter"
+version = "0.1.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyserial" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/68/36/29b7b896e83e195fac6d64ccff95c0f24a18ee86e7437a22e60e0331d90a/binho-host-adapter-0.1.6.tar.gz", hash = "sha256:1e6da7a84e208c13b5f489066f05774bff1d593d0f5bf1ca149c2b8e83eae856", size = 10068 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7b/6b/0f13486003aea3eb349c2946b7ec9753e7558b78e35d22c938062a96959c/binho_host_adapter-0.1.6-py3-none-any.whl", hash = "sha256:f71ca176c1e2fc1a5dce128beb286da217555c6c7c805f2ed282a6f3507ec277", size = 10540 },
+]
+
+[[package]]
+name = "circuitpython-cst816"
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "adafruit-blinka" },
+    { name = "adafruit-circuitpython-busdevice" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/40/6d/c781fa4b9a20924864bdf6257646b2285db3c53dce6310584a2a462f6b37/circuitpython-cst816-0.1.0.tar.gz", hash = "sha256:e1226f4f920aba46d3b70f2ad6e9693832d57e948b899b10ffa2144843bcf7c2", size = 20440 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/dc/40/7a3ce693fd3879160dac7b041685292846395e64ecdade0121aaaf8a1c90/circuitpython_cst816-0.1.0-py3-none-any.whl", hash = "sha256:36036242303124a305c4238b0cccced1850073e652116f66115de1abe1ddbb7a", size = 4888 },
+]
+
+[[package]]
+name = "haptgp"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "adafruit-circuitpython-bme280" },
+    { name = "adafruit-circuitpython-color-terminal" },
+    { name = "adafruit-circuitpython-displayio-layout" },
+    { name = "adafruit-circuitpython-drv2605" },
+    { name = "adafruit-circuitpython-ds3231" },
+    { name = "adafruit-circuitpython-gc9a01a" },
+    { name = "adafruit-circuitpython-neopixel" },
+    { name = "adafruit-circuitpython-veml7700" },
+    { name = "circuitpython-cst816" },
+    { name = "rpi-gpio" },
+    { name = "smbus2" },
+    { name = "sshkeyboard" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "adafruit-circuitpython-bme280", specifier = ">=2.6.29" },
+    { name = "adafruit-circuitpython-color-terminal", specifier = ">=0.2.0" },
+    { name = "adafruit-circuitpython-displayio-layout", specifier = ">=3.1.1" },
+    { name = "adafruit-circuitpython-drv2605", specifier = ">=1.3.7" },
+    { name = "adafruit-circuitpython-ds3231", specifier = ">=2.4.25" },
+    { name = "adafruit-circuitpython-gc9a01a", specifier = ">=1.0.0" },
+    { name = "adafruit-circuitpython-neopixel", specifier = ">=6.3.17" },
+    { name = "adafruit-circuitpython-veml7700", specifier = ">=2.1.5" },
+    { name = "circuitpython-cst816", specifier = ">=0.1.0" },
+    { name = "rpi-gpio", specifier = ">=0.7.1" },
+    { name = "smbus2", specifier = ">=0.5.0" },
+    { name = "sshkeyboard", specifier = ">=2.3.1" },
+]
+
+[[package]]
+name = "pyftdi"
+version = "0.57.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyserial" },
+    { name = "pyusb" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/16/cd/0731490946e037e954ef83719f07c7672cf32bc90dd9c75201c40b827664/pyftdi-0.57.1-py3-none-any.whl", hash = "sha256:efd3f5a7d43202dc883ff261a7b1cb4dcbbe65b19628f8603a8b1183a7bc2841", size = 146180 },
+]
+
+[[package]]
+name = "pyserial"
+version = "3.5"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1e/7d/ae3f0a63f41e4d2f6cb66a5b57197850f919f59e558159a4dd3a818f5082/pyserial-3.5.tar.gz", hash = "sha256:3c77e014170dfffbd816e6ffc205e9842efb10be9f58ec16d3e8675b4925cddb", size = 159125 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/07/bc/587a445451b253b285629263eb51c2d8e9bcea4fc97826266d186f96f558/pyserial-3.5-py2.py3-none-any.whl", hash = "sha256:c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0", size = 90585 },
+]
+
+[[package]]
+name = "pyusb"
+version = "1.3.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/00/6b/ce3727395e52b7b76dfcf0c665e37d223b680b9becc60710d4bc08b7b7cb/pyusb-1.3.1.tar.gz", hash = "sha256:3af070b607467c1c164f49d5b0caabe8ac78dbed9298d703a8dbf9df4052d17e", size = 77281 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/28/b8/27e6312e86408a44fe16bd28ee12dd98608b39f7e7e57884a24e8f29b573/pyusb-1.3.1-py3-none-any.whl", hash = "sha256:bf9b754557af4717fe80c2b07cc2b923a9151f5c08d17bdb5345dac09d6a0430", size = 58465 },
+]
+
+[[package]]
+name = "rpi-gpio"
+version = "0.7.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/c4/0f/10b524a12b3445af1c607c27b2f5ed122ef55756e29942900e5c950735f2/RPi.GPIO-0.7.1.tar.gz", hash = "sha256:cd61c4b03c37b62bba4a5acfea9862749c33c618e0295e7e90aa4713fb373b70", size = 29090 }
+
+[[package]]
+name = "smbus2"
+version = "0.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/10/c9/6d85aa809e107adf85303010a59b340be109c8f815cbedc5c08c73bcffef/smbus2-0.5.0.tar.gz", hash = "sha256:4a5946fd82277870c2878befdb1a29bb28d15cda14ea4d8d2d54cf3d4bdcb035", size = 16950 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/85/9f/2235ba9001e3c29fc342eeb222104420bcb7bac51555f0c034376a744075/smbus2-0.5.0-py2.py3-none-any.whl", hash = "sha256:1a15c3b9fa69357beb038cc0b5d37939702f8bfde1ddc89ca9f17d8461dbe949", size = 11527 },
+]
+
+[[package]]
+name = "sshkeyboard"
+version = "2.3.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e3/7b/d78e6ade4bb4680d0a610ed02047c4de04db62de8864193bf842c59c47cb/sshkeyboard-2.3.1.tar.gz", hash = "sha256:3273be5b2fde7f8d2ea075d40e1981104ac0928d7b77a848756f08d0e66a3d9f", size = 20296 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ea/b6/d24c6184348a91386e5ca5fe3e46668ef978dd694ff98574ef0dd5904522/sshkeyboard-2.3.1-py3-none-any.whl", hash = "sha256:05ec2cb116bd9c4a7c17d7add4a5af74e12eb2add24c110608cb90f6812692f9", size = 12870 },
+]
+
+[[package]]
+name = "sysv-ipc"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/0c/d7/5d2f861155e9749f981e6c58f2a482d3ab458bf8c35ae24d4b4d5899ebf9/sysv_ipc-1.1.0.tar.gz", hash = "sha256:0f063cbd36ec232032e425769ebc871f195a7d183b9af32f9901589ea7129ac3", size = 99448 }
+
+[[package]]
+name = "typing-extensions"
+version = "4.15.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz", hash = "sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466", size = 109391 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/18/67/36e9267722cc04a6b9f15c7f3441c2363321a3ea07da7ae0c0707beb2a9c/typing_extensions-4.15.0-py3-none-any.whl", hash = "sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548", size = 44614 },
+]
