@@ -1,3 +1,7 @@
+# https://docs.circuitpython.org/projects/gc9a01a/en/latest/
+# https://docs.circuitpython.org/projects/displayio-layout/en/latest/examples.html#switch-simple-test
+# https://docs.circuitpython.org/projects/color_terminal/en/latest/
+
 import board
 import displayio
 import terminalio
@@ -29,7 +33,9 @@ color_palette[1] = 0xAA0088  # Purple
 bg_sprite = displayio.TileGrid(bg_bitmap, pixel_shader=color_palette, x=0, y=0)
 main_group.append(bg_sprite)
 
-inner_circle = Circle(pixel_shader=color_palette, x=120, y=120, radius=100, color_index=1)
+inner_circle = Circle(pixel_shader=color_palette, x=120, y=120, radius=100, 
+                    #   color_index=1
+                      )
 main_group.append(inner_circle)
 
 # Draw a label
