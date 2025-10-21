@@ -2,7 +2,7 @@
 
 ## Using this project
 
-This project uses [uv](https://docs.astral.sh/uv/). It shouldnt be required, but if you don't use it, your mileage may vary. Tt also expects you to have `rsync` installed on your machine to syncrhonize the code on the pi without leaving your git credentials on it.
+This project uses [uv](https://docs.astral.sh/uv/). It shouldnt be required, but if you don't use it, your mileage may vary. It also expects you to have `rsync` installed on your machine to syncrhonize the code on the pi without leaving your git credentials on it.
 
 ## workflow commands
 
