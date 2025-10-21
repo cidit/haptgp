@@ -1,5 +1,9 @@
 # https://docs.circuitpython.org/projects/bme280/en/latest/_modules/adafruit_bme280/protocol.html
 
+"""testing status:
+- [X] verified working
+"""
+
 import board
 import time
 from adafruit_bme280 import basic as adafruit_bme280

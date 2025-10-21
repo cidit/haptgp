@@ -1,5 +1,10 @@
 # https://pypi.org/project/circuitpython-cst816/
 
+"""testing status:
+- [ ] verified working
+"""
+
+
 import time
 # import board
 import busio

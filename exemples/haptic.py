@@ -1,5 +1,9 @@
 # https://docs.circuitpython.org/projects/drv2605/en/latest/examples.html
 
+"""testing status:
+- [ ] verified working
+"""
+
 # SPDX-FileCopyrightText: 2017 Tony DiCola for Adafruit Industries
 # SPDX-License-Identifier: MIT
 

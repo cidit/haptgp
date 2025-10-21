@@ -2,6 +2,10 @@
 # https://docs.circuitpython.org/projects/displayio-layout/en/latest/examples.html#switch-simple-test
 # https://docs.circuitpython.org/projects/color_terminal/en/latest/
 
+"""testing status:
+- [ ] verified working
+"""
+
 import board
 import displayio
 import terminalio

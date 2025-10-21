@@ -1,5 +1,11 @@
 # https://docs.circuitpython.org/projects/ds3231/en/latest/examples.html    
 
+"""testing status:
+- [ ] verified working
+"""
+
+
+
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
 # SPDX-License-Identifier: MIT
 
