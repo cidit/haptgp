@@ -1,33 +1,46 @@
 from tap import Tap
-
+import tomllib
+import asyncio
+from dotenv import load_dotenv
 
 def get_pyproject():
-    import tomllib
-    with open('pyproject.toml', 'rb') as f:
+    with open("pyproject.toml", "rb") as f:
         pyproject = tomllib.load(f)
         return pyproject
 
 
 class ArgumentParser(Tap):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        pyproject = get_pyproject()
-        self.description = f"""{pyproject["project"]["name"]} v{pyproject["project"]["version"]}
-                            {pyproject["project"]["description"]}
-                            """
     hello: bool = False
+    env_file: str = ".env"
 
+    def __init__(self, 
+                 name: str, 
+                 version: str, 
+                 description: str, 
+                 *args, 
+                 **kwargs):
+        super().__init__(*args, **kwargs)
+        self.description = f"""
+            {name} v{version}
+            {description}
+        """
 
-def main():
+async def main():
+    pyproject = get_pyproject()
+    args = ArgumentParser(
+        name=pyproject["project"]["name"],
+        version=pyproject["project"]["version"],
+        description=pyproject["project"]["description"],
+    ).parse_args()
     
-    args = ArgumentParser().parse_args()
-    
+    load_dotenv(args.env_file)
+
     if args.hello:
         print("hello from haptgp!")
-        
+    
     while True:
         pass
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

@@ -2,6 +2,7 @@
 
 """testing status:
 - [ ] verified working
+- i2c addr not available
 """
 
 

@@ -4,6 +4,7 @@
 
 """testing status:
 - [ ] verified working
+- used ti have working backlight, now doesnt even have that
 """
 
 import board

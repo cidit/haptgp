@@ -1,7 +1,7 @@
 # https://docs.circuitpython.org/projects/ds3231/en/latest/examples.html    
 
 """testing status:
-- [ ] verified working
+- [X] verified working
 """
 
 

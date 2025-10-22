@@ -2,6 +2,7 @@
 
 """testing status:
 - [ ] verified working
+deteced with i2cdetect, but not working :(
 """
 
 # SPDX-FileCopyrightText: 2017 Tony DiCola for Adafruit Industries
