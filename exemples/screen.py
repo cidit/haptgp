@@ -3,8 +3,7 @@
 # https://docs.circuitpython.org/projects/color_terminal/en/latest/
 
 """testing status:
-- [ ] verified working
-- used ti have working backlight, now doesnt even have that
+- [X] verified working
 """
 
 import board
@@ -17,9 +16,9 @@ from vectorio import Circle
 from adafruit_gc9a01a import GC9A01A
 
 spi = board.SPI()
-tft_cs = board.D5
-tft_dc = board.D6
-tft_reset = board.D9
+tft_cs = board.D8
+tft_dc = board.D25
+tft_reset = board.D27
 
 displayio.release_displays()
 

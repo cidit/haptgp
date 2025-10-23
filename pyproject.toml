@@ -15,6 +15,7 @@ dependencies = [
     "adafruit-circuitpython-veml7700>=2.1.5",
     "circuitpython-cst816>=0.1.0",
     "fastapi>=0.118.0",
+    "gpiozero>=2.0.1",
     "paho-mqtt>=2.1.0",
     "python-dotenv>=1.1.1",
     "rpi-gpio>=0.7.1",
