@@ -44,23 +44,37 @@ main menu
 
 """
 
+import asyncio
 import displayio
-from vectorio import Circle
+import vectorio
 from typing import Callable
+from adafruit_gc9a01a import GC9A01A
+
 # from adafruit_display_text.
 
+vectorio.Polygon
 
 # TODO: replace "int" with actual types
 Dispatch = int 
 Store = int
+
 View = Callable[[Store, Dispatch], displayio.Group]
 
+async def render_task(period_s: float):
+    while True:
+        print('rendering start')
+        await asyncio.sleep(period_s) # FIXME: this waits `period_s` seconds between executions, without taking into account execution time. negligable enough to not care?
+
+def render(target: GC9A01A):
+    root = displayio.Group()
+    target.root_group = root
+    
 
 def main_menu_view(palette: displayio.Palette):
     root = displayio.Group()
     return root
 
-def single_datapoint_view( label: str, value: float, unit: str):
+def single_datapoint_view(label: str, value: float, unit: str):
     """
     - shows one datapoint in big.
     - click anywhere to show controls

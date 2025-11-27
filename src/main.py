@@ -1,46 +1,27 @@
-from tap import Tap
-import tomllib
 import asyncio
 from dotenv import load_dotenv
+from reaktiv import Computed, Signal, Effect
+import pandas as p
+import calibrations
+from cmdl import get_pyproject, ArgumentParser
+from views import render_task
 
-def get_pyproject():
-    with open("pyproject.toml", "rb") as f:
-        pyproject = tomllib.load(f)
-        return pyproject
+from app import app
 
-
-class ArgumentParser(Tap):
-    hello: bool = False
-    env_file: str = ".env"
-
-    def __init__(self, 
-                 name: str, 
-                 version: str, 
-                 description: str, 
-                 *args, 
-                 **kwargs):
-        super().__init__(*args, **kwargs)
-        self.description = f"""
-            {name} v{version}
-            {description}
-        """
-
-async def main():
+def main():
     pyproject = get_pyproject()
-    args = ArgumentParser(
-        name=pyproject["project"]["name"],
-        version=pyproject["project"]["version"],
-        description=pyproject["project"]["description"],
-    ).parse_args()
-    
+    args = ArgumentParser(pyproject["project"]).parse_args()
+
     load_dotenv(args.env_file)
 
     if args.hello:
         print("hello from haptgp!")
-    
-    while True:
-        pass
+
+    if args.calibrate == "light":
+        calibrations.calibrate_light()
+        return
+    app()
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
