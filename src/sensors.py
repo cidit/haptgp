@@ -1,11 +1,10 @@
 from reaktiv import Signal
 from smbus2 import SMBus
-import adafruit_veml7700
+from adafruit_veml7700 import VEML7700
 from typing import Callable
 import pandas as p
-from scipy import interpolate
-from adafruit_bme280.basic import Adafruit_BME280_I2C
-
+from adafruit_bme280.advanced import Adafruit_BME280_I2C
+import numpy as np
 
 
 
@@ -15,21 +14,24 @@ alpha = 0.1  # must be between 0 and 1 inclusive
 
 
 class SensorReader:
-    value = Signal[float | None](None)
-
     def __init__(self, aquire: Callable[[], float], calibration: p.DataFrame | None):
+        self.value = Signal[float | None](None)
         self.aquire = aquire
-        self.interpolation_function = interpolate.interp1d(
-            x=calibration["reading"],
-            y=calibration["reference"],
-            assume_sorted=False,
-        ) if calibration else None
+        self.calibration = calibration
+        # self.interpolation_function = interpolate.interp1d(
+        #     x=calibration["reading"],
+        #     y=calibration["reference"],
+        #     assume_sorted=False,
+        # ) if calibration is not None else None
 
     def read(self) -> float:
         reading = self.aquire()
-        if self.interpolation_function is None:
+        # if self.interpolation_function is None:
+        #     return reading
+        if self.calibration is None:
             return reading
-        return self.interpolation_function(reading)
+        return np.interp(reading, xp=self.calibration["reading"], fp=self.calibration["reference"])
+        # return self.interpolation_function(reading)
 
     def update(self):
         self.value.set(self.read())
@@ -50,9 +52,9 @@ class RotaryEncoder(SensorReader):
     ENCO_RESOLUTION_QUANTA = 1 / (2**14)
     
     def __init__(
-        self, i2c_bus: int = I2C_BUS_NUMBER, device_address: int = DEVICE_ADDRESS
+        self, i2c_bus: int = I2C_BUS_NUMBER, device_address: int = DEVICE_ADDRESS, calibration = None
     ):
-        super().__init__(aquire=self.aquire_fn)
+        super().__init__(aquire=self.aquire_fn, calibration=calibration)
         self.i2c_bus = i2c_bus
         self.device_address = device_address
 
@@ -78,14 +80,15 @@ class RotaryEncoder(SensorReader):
 
 
 class Light(SensorReader):
-    def __init__(self, veml: adafruit_veml7700.VEML7700):
+    def __init__(self, veml: VEML7700, calibration = None):
+        super().__init__(aquire=self.aquire_fn, calibration=calibration)
         self.veml7700 = veml
 
     def aquire_fn(self):
         return self.veml7700.light
 
 class Temperature(SensorReader):
-    def __init__(self, bme: Adafruit_BME280_I2C, calibration):
+    def __init__(self, bme: Adafruit_BME280_I2C, calibration = None):
         super().__init__(aquire=self.aquire_fn, calibration=calibration)
         self.bme = bme
 
@@ -94,7 +97,7 @@ class Temperature(SensorReader):
     
 
 class Pressure(SensorReader):
-    def __init__(self, bme: Adafruit_BME280_I2C, calibration):
+    def __init__(self, bme: Adafruit_BME280_I2C, calibration = None):
         super().__init__(aquire=self.aquire_fn, calibration=calibration)
         self.bme = bme
 
@@ -103,7 +106,7 @@ class Pressure(SensorReader):
     
 
 class Humidity(SensorReader):
-    def __init__(self, bme: Adafruit_BME280_I2C, calibration):
+    def __init__(self, bme: Adafruit_BME280_I2C, calibration = None):
         super().__init__(aquire=self.aquire_fn, calibration=calibration)
         self.bme = bme
 
