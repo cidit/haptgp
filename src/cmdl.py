@@ -13,6 +13,7 @@ class ArgumentParser(Tap):
     hello: bool = False
     env_file: str = ".env"
     calibrate: Literal["light"] | None = None
+    tb_mqtt_host: str | None = None
 
     def __init__(self, pyproject: dict[str, str], *args, **kwargs):
         super().__init__(*args, **kwargs)

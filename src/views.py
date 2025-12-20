@@ -44,11 +44,13 @@ main menu
 
 """
 
-import asyncio
 import displayio
+import terminalio
+from reaktiv import Computed, Effect
 import vectorio
 from typing import Callable
-from adafruit_gc9a01a import GC9A01A
+# from adafruit_display_text.bitmap_label import Label
+from adafruit_display_text.label import Label
 
 # from adafruit_display_text.
 
@@ -60,45 +62,37 @@ Store = int
 
 View = Callable[[Store, Dispatch], displayio.Group]
 
-async def render_task(period_s: float):
-    while True:
-        print('rendering start')
-        await asyncio.sleep(period_s) # FIXME: this waits `period_s` seconds between executions, without taking into account execution time. negligable enough to not care?
 
-def render(target: GC9A01A):
-    root = displayio.Group()
-    target.root_group = root
+# class SignalStore(dict[str, Signal]):
+#     def take(self, *keys):
+# TODO: return namespace instead
+#         return [self[k] for k in keys]
+        
+def summary(enco, light, temperature, humidity, pressure,):
+    root = displayio.Group(x=15, y=40)
     
-
-def main_menu_view(palette: displayio.Palette):
-    root = displayio.Group()
+    angle_round = Computed(lambda: round(enco() or 0.0, 1))
+    
+    def text_template(a, t, L, h, p):
+        return f"""
+        angle: {a or 0.0:>5.1f}°
+        {t or 0.0:>8.2f}°C\t{L or 0.0:>8.0f}lux
+        {h or 0.0:>8.2f}% \t{p or 0.0:>8.1f}kPa
+        """
+    
+    text_lbl = Label(font=terminalio.FONT, text=text_template(0,0,0,0,0))
+    root.append(text_lbl)
+    
+    @Effect
+    def change_on_store_update():
+        text_lbl.text = text_template(angle_round(), temperature(), light(), humidity(), pressure())
+    
     return root
 
-def single_datapoint_view(label: str, value: float, unit: str):
-    """
-    - shows one datapoint in big.
-    - click anywhere to show controls
-        - click anywhere to hide controls
-        - turn right to enter calibration mode (?) # TODO
-        - turn left to go back to weather_station_view
-    """
-    pass
-
-def light_level_view():
-    return single_datapoint_view("Light Level", 0.0, "lux")
-
-def temperature_view():
-    return single_datapoint_view("Temperature", 0.0, "°C")
-
-def humidity_view():
-    return single_datapoint_view("Humidity", 0.0, "%")
-
-def pressure_view():
-    return single_datapoint_view("Pressure", 0.0, "kPa")
-
-def weather_station_view():
-    """
-    displays 4 quarter circles with each measurements in real time.
-    measurements can be clicked to go to the full screen view of that measurement
-    """
-    pass
+def radio(knob, music_service=0):
+    root = displayio.Group(x=15, y=40)
+    
+    text_lbl = Label(font=terminalio.FONT, text="this shouldve played music")
+    root.append(text_lbl)
+    
+    return root

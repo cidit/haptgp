@@ -24,7 +24,7 @@ class SensorReader:
         #     assume_sorted=False,
         # ) if calibration is not None else None
 
-    def read(self) -> float:
+    def read_single(self) -> float:
         reading = self.aquire()
         # if self.interpolation_function is None:
         #     return reading
@@ -33,8 +33,12 @@ class SensorReader:
         return np.interp(reading, xp=self.calibration["reading"], fp=self.calibration["reference"])
         # return self.interpolation_function(reading)
 
-    def update(self):
-        self.value.set(self.read())
+    def update(self, samplecount=1):
+        sum = 0
+        for _ in range(samplecount):
+            sum += self.read_single()
+        avg = sum / samplecount
+        self.value.set(avg)
 
 
 class RotaryEncoder(SensorReader):

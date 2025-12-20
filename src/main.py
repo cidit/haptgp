@@ -9,7 +9,6 @@ def main():
     args = ArgumentParser(pyproject["project"]).parse_args()
     load_dotenv(args.env_file)
     
-
     if args.hello:
         print("hello from haptgp!")
     if args.calibrate == "light":
